@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horror Experience Project</title>
+  <link rel="stylesheet" href="projecte1.css" />
+  <script>
+    function goBack() {
+      window.location.href = "Protafoli.html";
+    }
+
+    const phoneIcon = document.getElementById('phone-icon');
+    const phonePopup = document.getElementById('phone-popup');
+
+    phoneIcon.addEventListener('click', () => {
+      const isVisible = phonePopup.style.display === 'block';
+      phonePopup.style.display = isVisible ? 'none' : 'block';
+  
+    }
+  );
+
+  document.addEventListener('click', (e) => {
+    if (!phoneIcon.contains(e.target) && !phonePopup.contains(e.target)) {
+      phonePopup.style.display = 'none';
+    }
+  });
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="name">David Casany</h1>
+      <div class="contact-icons">
+        <a href="mailto:casany.balleste@gmail.com" data-tooltip="Mail">📧</a>
+        
+        <div style="position: relative; display: inline-block;">
+          <a id="phone-icon" data-tooltip="Phone number">📞</a>
+          <div id="phone-popup" class="phone-popup">+34 686961229</div>
+        </div>
+
+        <a href="CV_David_Casany.pdf" target="_blank" class="skill-item" style="display: inline-flex; align-items: center; gap: 5px; font-size: 1em;" data-tooltip="Resume">
+          Resume <span style="transform: rotate(90deg); display: inline-block;">➤</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="back-button" onclick="goBack()">
+      <span class="arrow">⬅</span> Go back
+    </div>
+
+    <div class="main-video">
+      <video src="Horror_project.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="info-section">
+      <div class="info-box">
+        <h2>About</h2>
+        <p>This project is my own take on the horror genre. I modeled and textured all the assets in Blender, and implemented them in Unity 3D using the terrain editor. I also created custom particle systems to generate the fog, and designed a teleportation system to simulate an infinite forest.</p>
+      </div>
+
+      <div class="info-box">
+        <h2>Project Info</h2>
+        <ul>
+          <li>Role: Programmer, Designer, Modeler 3D, Texturizer</li>
+          <li>Team size: 1</li>
+          <li>Time frame: 3 weeks</li>
+          <li>Engine: Unity 3D</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>Introduction to the project</h2>
+      <p>This game was created as a solo experiment to explore horror mechanics in a minimalist environment. The aim was to generate suspense and unease without relying on jumpscares.</p>
+    </section>
+
+    <section class="section">
+      <h2>Modeling and texturing</h2>
+      <p>All assets were created from scratch in Blender and hand-textured to match the dark, atmospheric style of the game. The modeling process focused on simplicity and stylized details to enhance clarity in low-light settings.</p>
+      <div class="media-row">
+        <img src="img/model1.jpg" alt="Model example 1">
+        <img src="img/model2.jpg" alt="Model example 2">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Custom particle system and teleports</h2>
+      <p>I designed a fog system using Unity's particle tools to create a layered, dense atmosphere. The teleportation mechanic allows players to walk through portals that reset their position in the forest, giving the illusion of endless space.</p>
+      <div class="media-row">
+        <video src="videos/particles.mp4" controls muted></video>
+        <video src="videos/teleport.mp4" controls muted></video>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What I learned</h2>
+      <p>This project helped me gain hands-on experience in Unity 3D, 3D modeling with Blender, and using particle systems creatively. I also improved my understanding of game flow, environment design, and solo development pacing.</p>
+    </section>
+  </div>
+</body>
+
+
+</html>
+<
